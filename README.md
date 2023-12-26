@@ -25,6 +25,6 @@
 
 ## Web服务端模块
 
-Web服务端模块位于\web路径下，按照前端的Vue框架和后端的Spring Boot框架以及Flask框架搭建而成，运行需要按照相关框架进行相关配置，比如运行vue.js所需的依赖，Spring Boot框架所需的Maven环境，以及管理数据库所需的MyBatis等。最后通过IDEA，导入Maven项目，根据pom.xml文件打成JAR包，直接通过java -jar的方式运行即可。
+Web服务端模块位于 ``\代码\web`` 路径下，按照前端的Vue框架和后端的Spring Boot框架以及Flask框架搭建而成，运行需要按照相关框架进行相关配置，比如运行vue.js所需的依赖，Spring Boot框架所需的Maven环境，以及管理数据库所需的MyBatis等。最后通过IDEA，导入Maven项目，根据pom.xml文件打成JAR包，直接通过 ``java -jar `` 的方式运行即可。
 
 请参考本文档以获取有关运行和使用系统的详细说明。
