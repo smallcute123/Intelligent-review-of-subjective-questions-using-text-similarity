@@ -1,0 +1,29 @@
+server:
+  port: 8881 #写法：key： value，冒号后面必须有空格
+  servlet:
+    context-path: /patriot
+  tomcat:
+    resource:
+      allow-caching: false
+
+# 配置DataSource
+spring:
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT&characterEncoding=utf-8
+  username: root
+  password: root
+  #  initialSize: 5
+  #  maxActive: 100
+  #  minIdle: 3
+  #  maxWait: 50000
+
+  #设置直接访问静态资源方式
+ #mvc:
+  # static-path-pattern: /**
+
+# 配置MyBatis
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.fwwb.patriot.bean
+

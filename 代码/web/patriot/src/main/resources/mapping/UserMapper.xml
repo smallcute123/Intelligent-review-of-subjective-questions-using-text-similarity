@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fwwb.patriot.mapper.UserMapper">
+
+    <resultMap id="userResultMap" type="com.fwwb.patriot.bean.User">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="worknumber" jdbcType="VARCHAR" property="worknumber" />
+    </resultMap>
+
+    <select id="findback" resultType="com.fwwb.patriot.bean.User">
+        select * FROM t_user where username = #{username}and email = #{email}and realname = #{realname}and worknumber = #{worknumber}
+    </select>
+
+    <select id="login" resultType="com.fwwb.patriot.bean.User">
+        SELECT * FROM t_user where username = #{username} and password = #{password}
+    </select>
+
+    <insert id="register" parameterType="com.fwwb.patriot.bean.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_user (username, password,realname,email,worknumber) VALUES (#{username}, #{password}, #{realname}, #{email}, #{worknumber})
+    </insert>
+
+    <update id="updatepassword" parameterType="com.fwwb.patriot.bean.User">
+        update t_user
+        <set >
+            <if test="password != null" >
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="check"  resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM t_user WHERE username = #{username}
+    </select>
+
+</mapper>
+
