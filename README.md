@@ -1,32 +1,30 @@
-#  Application and Development Environment
+# 应用与开发环境
 
-The system's application environment is described as follows: Python 3.6 and above, MySQL 5.6 and above, JDK 1.8 and above, Tomcat 9 and above, Windows 7 and above.
+本系统应用环境描述如下：Python 3.6及以上、MySQL 5.6及以上、JDK 1.8及以上、Tomcat 9及以上、Windows 7及以上。
 
-The development technologies and environment for this system are detailed in Table 5.1.
+## 开发技术与环境
 
-##  Development Technologies and Environment
-
-| Module       | Development Tools               | Technologies, Libraries, and Environment                         |
-|--------------|---------------------------------|-----------------------------------------------------------------|
-| Algorithm    | Jupyter Notebook; Vscode 1.38.1; | jieba; jiagu; itertools; synonyms; gensim                        |
+| 模块         | 开发工具                        | 开发技术、库与环境                                              |
+| ------------ | ------------------------------- | --------------------------------------------------------------- |
+| 算法模块     | Jupyter Notebook; Vscode 1.38.1; | jieba; jiagu; itertools; synonyms; gensim                        |
 |              | PyCharm 2019;                   |                                                                 |
-| Web Frontend | IntelliJ IDEA 2018;              | JavaScript language; Vue framework                               |
-| Server       | MobaXterm; Tomcat 9 (Spring Boot | CentOS 7.7; Windows 10                                           |
-|              | built-in)                        |                                                                 |
-| Java Backend | IntelliJ IDEA 2019;               | Spring Boot; Maven; MyBatis                                      |
-| Database     | Navicat; PhpMyAdmin;              | MySQL                                                           |
+| 网页端       | IntelliJ IDEA 2018;              | JavaScript语言; Vue框架                                       |
+| 服务器       | MobaXterm; Tomcat 9（Spring Boot  | Centos 7.7; Windows 10                                          |
+|              | 内置）                          |                                                                 |
+| Java后端     | IntelliJ IDEA 2019;               | Spring Boot; Maven; MyBatis                                     |
+| 数据库       | Navicat; PhpMyAdmin;             | MySQL                                                           |
 
-#  Running and Usage
+# 运行与使用
 
-First, ensure the correct configuration and installation of the relevant environment and software as described in Section 5.1.
+首先根据上述内容保证相关环境和软件的正确配置和安装。
 
-## Algorithm Module
+## 算法模块
 
-The code for the algorithm module is located in the `\code\python` directory, with the training set contained in the `\code\data` directory. The main algorithm program is `go.py`. The required input format is illustrated in Figure 5.1.
+算法模块代码位于\代码\python路径下，训练集包含在\代码\data路径下，go.py为算法主程序。所需的输入格式可见视频。
 
 
-## Web Server Module
+## Web服务端模块
 
-The web server module is located in the `\web` directory. It is built using the Vue framework for the frontend, Spring Boot for the backend, and Flask for certain functionalities. To run, configure the relevant frameworks, such as dependencies for running vue.js, the maven environment for the Spring Boot framework, and mybatis for database management. Finally, import the maven project into IntelliJ IDEA, build the project as a JAR file using the `pom.xml` file, and run it using the command `java -jar`.
+Web服务端模块位于\web路径下，按照前端的Vue框架和后端的Spring Boot框架以及Flask框架搭建而成，运行需要按照相关框架进行相关配置，比如运行vue.js所需的依赖，Spring Boot框架所需的Maven环境，以及管理数据库所需的MyBatis等。最后通过IDEA，导入Maven项目，根据pom.xml文件打成JAR包，直接通过java -jar的方式运行即可。
 
-Please refer to this document for detailed instructions on running and using the system.
+请参考本文档以获取有关运行和使用系统的详细说明。
